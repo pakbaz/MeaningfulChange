@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -11,6 +12,8 @@ import { Report } from '../pages/report/report';
 import { Donate } from '../pages/donate/donate';
 import { Advocate } from '../pages/advocate/advocate';
 import { Volunteer } from '../pages/volunteer/volunteer';
+
+import { VolunteerServiceProvider } from '../providers/volunteer-service/volunteer-service';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { Volunteer } from '../pages/volunteer/volunteer';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +41,8 @@ import { Volunteer } from '../pages/volunteer/volunteer';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    VolunteerServiceProvider
   ]
 })
 export class AppModule {}

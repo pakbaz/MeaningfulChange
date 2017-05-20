@@ -15,14 +15,19 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.ReportBackground { background-color: #FF6138; }
-.ReportForeground { color: #FF6138; }
+$ReportColor : #FF6138;
+$DonateColor : #BEEB9F;
+$VolunteerColor : #79BD8F;
+$AdvocateColor : #00A388;
 
-.DonateBackground { background-color: #BEEB9F; }
-.DonateForeground { color: #BEEB9F; }
+.ReportBackground { background-color: $ReportColor; }
+.ReportForeground { color: $ReportColor }
 
-.VolunteerBackground { background-color: #79BD8F; }
-.VolunteerForeground { color: #79BD8F; }
+.DonateBackground { background-color: $DonateColor; }
+.DonateForeground { color: $DonateColor; }
 
-.AdvocateBackground { background-color: #00A388; }
-.AdvocateForeground { color: #00A388; }
+.VolunteerBackground { background-color: $VolunteerColor; }
+.VolunteerForeground { color: $VolunteerColor; }
+
+.AdvocateBackground { background-color: $AdvocateColor; }
+.AdvocateForeground { color: $AdvocateColor; }
