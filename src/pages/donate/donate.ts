@@ -27,7 +27,7 @@ export class Donate {
     {
       "userName" : "bowatkins",
       "latitude" : this.currentPosition.coords.latitude,
-      "longitude" : this.currentPosition.coords.latitude,
+      "longitude" : this.currentPosition.coords.longitude,
       "geoSRID" : "4326",
       "amount" : amount,
       "cause" : 1,  // TODO: Get this data from the form
