@@ -1,3 +1,11 @@
-page-home {
 
+.headerImage
+{
+    border-left: 10px solid $AdvocateColor;
+    width: 100%;
+    height: 75px;
+    background-image: url("../../assets/backgrounds/food.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
