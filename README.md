@@ -1,26 +1,19 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is the sourceCode for the Meaningful Change project presented for Houston Hackaton Contest
 
-## How to use this template
+## Inspiration
+On an average night in 2016, more than 3,600 homeless people could be found on our streets and in our shelters.  Chronic homelessness requires a strategic response and most often, the work of multiple agencies and the community to help the most vulnerable in our city reach their goals of safe shelter and a way back into society.  Mayor Sylvester Turner has invited the community to help implement an anti-panhandling awareness campaign in an effort to redirect “street donations” to fund more shelter beds, new public health and safety regulations and ultimately more stability in their lives.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/driftyco/ionic2-app-base).
+## What it does
+The app encourages the community to react in a meaningful way, rather than enabling those experiencing homelessness to stay on the streets.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/driftyco/ionic2-app-base).
+## How we built it
+The 'Team Hess' consisted of members with different areas of expertise:
+- Front-end development was done on Ionic framework
+- Middle-tier API layer was built on Azure Functions
+- Backend database on Azure SQL
+- Administrative reporting on TIBCO Spotfire
 
-### With the Ionic CLI:
+## About The App
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
+To Run the app you need Ionic 3 installed available through node package manager. You might need to have iOS and android SDK installed on your machine.
 
