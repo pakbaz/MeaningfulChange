@@ -4,6 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
+import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -46,6 +49,8 @@ import { UniqueDeviceID } from '@ionic-native/unique-device-id';
   ],
   providers: [
     StatusBar,
+    Geolocation,
+    GoogleMaps,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     VolunteerServiceProvider,

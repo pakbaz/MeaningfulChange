@@ -7,5 +7,31 @@
 </ion-header>
 
 <ion-content padding>
-  (report page)
+  <ion-grid style="text-align:center">
+    <ion-row>
+      <ion-col col-12>
+        <div #map style="height:300px;"  id="map"></div>  
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        
+       <ion-item>
+          <ion-range min="0" max="20" step="1" snaps="true" color="danger" [(ngModel)]="clientCount">
+            <ion-icon range-left small color="danger" name="person"></ion-icon>
+            <ion-icon range-right color="danger" name="people"></ion-icon>
+          </ion-range>
+          <ion-label>{{clientCount}} potential client(s)</ion-label>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 >
+
+          <button ion-button >Report</button>
+          <button ion-button >Report and Donate</button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
