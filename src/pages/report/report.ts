@@ -123,7 +123,7 @@ export class Report {
       "observationLongitude" : this.currentPosition.coords.longitude,
       "observationGroup" : this.clientCount,
       "geoSRID": "4326",
-      "observationDateTime" : new Date().toLocaleDateString()
+      "observationDateTime" : new Date().toLocaleTimeString()
     }
     this.http.post(this.url, reportJson)
     .map(res => res.json())
