@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 
 import { Report } from '../pages/report/report';
 import { Donate } from '../pages/donate/donate';
+import { DonateConfirmation } from '../pages/donate-confirmation/donate-confirmation';
 import { Advocate } from '../pages/advocate/advocate';
 import { Volunteer } from '../pages/volunteer/volunteer';
 
@@ -20,6 +21,7 @@ import { VolunteerServiceProvider } from '../providers/volunteer-service/volunte
     MyApp,
     HomePage,
     Donate,
+    DonateConfirmation,
     Report,
     Advocate,
     Volunteer
@@ -34,6 +36,7 @@ import { VolunteerServiceProvider } from '../providers/volunteer-service/volunte
     MyApp,
     HomePage,
     Donate,
+    DonateConfirmation,
     Report,
     Advocate,
     Volunteer
