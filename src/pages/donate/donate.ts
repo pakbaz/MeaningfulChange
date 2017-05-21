@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { Observable } from "rxjs/Observable";
 import { DonateConfirmation } from '../donate-confirmation/donate-confirmation';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
 @Component({
   selector: 'page-donate',
@@ -12,7 +13,7 @@ import { DonateConfirmation } from '../donate-confirmation/donate-confirmation';
 export class Donate {
   //private res : Observable<Response>;
 
-  constructor(public navCtrl: NavController, public http: Http) {
+  constructor(public navCtrl: NavController, public http: Http, private uniqueDeviceID: UniqueDeviceID) {
 
   }
 
@@ -20,10 +21,13 @@ export class Donate {
   {
     var url = "https://hessersapi.azurewebsites.net/api/Donate";
     var date = new Date();
+    var deviceId = "bowatkins";
+    
+    //this.uniqueDeviceID.get().then((uuid: any) => deviceId = uuid);
 
     var donateJson = 
     {
-      "userName" : "bowatkins",
+      "userName" : deviceId,
       "latitude" : 123.456,
       "longitude" : 123.456,
       "geoSRID" : "1433",

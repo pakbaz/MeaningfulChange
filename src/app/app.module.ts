@@ -16,6 +16,9 @@ import { Volunteer } from '../pages/volunteer/volunteer';
 
 import { VolunteerServiceProvider } from '../providers/volunteer-service/volunteer-service';
 
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +48,8 @@ import { VolunteerServiceProvider } from '../providers/volunteer-service/volunte
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    VolunteerServiceProvider
+    VolunteerServiceProvider,
+    UniqueDeviceID
   ]
 })
 export class AppModule {}
