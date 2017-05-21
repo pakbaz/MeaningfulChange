@@ -14,3 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$ReportColor : #FF6138;
+$DonateColor : #BEEB9F;
+$VolunteerColor : #79BD8F;
+$AdvocateColor : #00A388;
+
+.ReportBackground { background-color: $ReportColor; }
+.ReportForeground { color: $ReportColor }
+
+.DonateBackground { background-color: $DonateColor; }
+.DonateForeground { color: $DonateColor; }
+
+.VolunteerBackground { background-color: $VolunteerColor; }
+.VolunteerForeground { color: $VolunteerColor; }
+
+.AdvocateBackground { background-color: $AdvocateColor; }
+.AdvocateForeground { color: $AdvocateColor; }
