@@ -6,61 +6,66 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <div>
-    (copy)
-  </div>
+<ion-content>
 
-  <div padding>
-    <ion-segment>
-      <ion-segment-button value="1">
-        Housing
-      </ion-segment-button>
-      <ion-segment-button value="2">
-        Food
-      </ion-segment-button>
-      <ion-segment-button value="3">
-        Mental Health
-      </ion-segment-button>
-      <ion-segment-button value="4">
-        Drug Rehab
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-
-  <ion-grid style="text-align: center;">
-    <ion-row>
-      <ion-col col-6>
-
-        <button ion-button color="secondary" (click)="donate(1)">
-          Donate $1
-        </button>
-
-      </ion-col>
-      <ion-col col-6>
-
-        <button ion-button color="secondary" (click)="donate(2)">
-          Donate $2
-        </button>
-
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-6>
-
-        <button ion-button color="secondary" (click)="donate(5)">
-          Donate $5
-        </button>
-
-      </ion-col>
-      <ion-col col-6>
-
-        <button ion-button color="secondary" (click)="donate(10)">
-          Donate $10
-        </button>
-
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="headerImage headerImageDonate"></div>
   
+  <div padding>
+    <div>
+      (copy)
+    </div>
+
+    <div padding>
+      <ion-segment>
+        <ion-segment-button value="1">
+          Housing
+        </ion-segment-button>
+        <ion-segment-button value="2">
+          Food
+        </ion-segment-button>
+        <ion-segment-button value="3">
+          Mental Health
+        </ion-segment-button>
+        <ion-segment-button value="4">
+          Drug Rehab
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <ion-grid style="text-align: center;">
+      <ion-row>
+        <ion-col col-6>
+
+          <button ion-button color="secondary" (click)="donate(1)">
+            Donate $1
+          </button>
+
+        </ion-col>
+        <ion-col col-6>
+
+          <button ion-button color="secondary" (click)="donate(2)">
+            Donate $2
+          </button>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+
+          <button ion-button color="secondary" (click)="donate(5)">
+            Donate $5
+          </button>
+
+        </ion-col>
+        <ion-col col-6>
+
+          <button ion-button color="secondary" (click)="donate(10)">
+            Donate $10
+          </button>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>

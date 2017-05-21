@@ -6,13 +6,31 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-  <ion-list>
-    <ion-item *ngFor="let opportunity of opportunities" (click)="openUrl(opportunity.Link)">
-      <h2>{{ opportunity.Title }}</h2>
-      <p>{{ opportunity.Description }}</p>
-    </ion-item>
-  </ion-list>
+  <div class="headerImage headerImageVolunteer"></div>
+  
+  <div padding>
+
+    <blockquote>
+      "The best way to find yourself is to lose yourself in the service of others."
+    </blockquote>
+    <div class="attribution">
+      Mahatma Gandhi
+    </div>
+  
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+
+    <ion-list>
+      <ion-item *ngFor="let opportunity of opportunities" (click)="openUrl(opportunity.Link)">
+        <ion-avatar item-left>
+          <img src="../../assets/Volunteer/{{ opportunity.Id }}.jpg" />
+        </ion-avatar>
+        <h2>{{ opportunity.Title }}</h2>
+        <p>{{ opportunity.Description }}</p>
+      </ion-item>
+    </ion-list>
+
+  </div>
 
 </ion-content>
