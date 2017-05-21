@@ -24,7 +24,7 @@
     <ion-list>
       <ion-item *ngFor="let opportunity of opportunities" (click)="openUrl(opportunity.Link)">
         <ion-avatar item-left>
-          <img src="../../assets/Volunteer/{{ opportunity.Id }}.jpg" />
+          <img src="{{ opportunity.ImageUrl }}" />
         </ion-avatar>
         <h2>{{ opportunity.Title }}</h2>
         <p>{{ opportunity.Description }}</p>
