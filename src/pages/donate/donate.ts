@@ -19,7 +19,6 @@ export class Donate {
   donate(amount: number)
   {
     var url = "https://hessersapi.azurewebsites.net/api/Donate";
-    var date = new Date();
 
     var donateJson = 
     {
@@ -30,7 +29,7 @@ export class Donate {
       "amount" : amount,
       "cause" : 1,  // TODO: Get this data from the form
       "paymentCode" : "ABCD",
-      "donationDateTime" : date.toString()
+      "donationDateTime" : new Date().toLocaleDateString()
     }
 
     this.http.post(url, donateJson)
