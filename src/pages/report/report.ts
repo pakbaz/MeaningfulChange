@@ -116,7 +116,6 @@ export class Report {
 
   Report(){
    
-    var date = new Date();
  var reportJson = 
     {
       "userName" : "spakbaz",
@@ -124,7 +123,7 @@ export class Report {
       "observationLongitude" : this.currentPosition.coords.longitude,
       "observationGroup" : this.clientCount,
       "geoSRID": "4326",
-      "observationDateTime" : date.toString()
+      "observationDateTime" : new Date().toLocaleDateString()
     }
     this.http.post(this.url, reportJson)
     .map(res => res.json())
