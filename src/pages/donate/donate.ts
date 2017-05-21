@@ -32,7 +32,7 @@ export class Donate {
       "amount" : amount,
       "cause" : 1,  // TODO: Get this data from the form
       "paymentCode" : "ABCD",
-      "donationDateTime" : new Date().toLocaleDateString()
+      "donationDateTime" : new Date().toLocaleTimeString()
     }
 
     this.http.post(url, donateJson)
