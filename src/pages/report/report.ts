@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import { Http, Response } from '@angular/http';
 import { Donate } from '../donate/donate';
@@ -26,12 +26,14 @@ export class Report {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
   currentPosition: Geoposition;
+  url : string = 'https://hessersapi.azurewebsites.net/api/InsertObservationCensusRecord';
   private clientCount: number = 0;
   constructor(public navCtrl: NavController, 
   private geolocation: Geolocation, 
   private googleMaps: GoogleMaps, 
   private censusService: CensusServiceProvider,
-  private http: Http) {
+  private http: Http,
+  public alertCtrl: AlertController) {
 
   }
 
@@ -113,21 +115,31 @@ export class Report {
   }
 
   Report(){
-    var url = 'https://hessersapi.azurewebsites.net/api/InsertObservationCensusRecord';
+   
     var date = new Date();
  var reportJson = 
     {
       "userName" : "spakbaz",
-      "latitude" : this.currentPosition.coords.latitude,
-      "longitude" : this.currentPosition.coords.longitude,
-      "people" : this.clientCount,
-      "paymentCode" : "ABCD",
-      "donationDateTime" : date.toString()
+      "observationLatitude" : this.currentPosition.coords.latitude,
+      "observationLongitude" : this.currentPosition.coords.longitude,
+      "observationGroup" : this.clientCount,
+      "geoSRID": "4326",
+      "observationDateTime" : date.toString()
     }
-    this.http.post(url, reportJson)
+    this.http.post(this.url, reportJson)
     .map(res => res.json())
-    .subscribe(data => {console.info('reported')});
+    .subscribe(data => {console.info('reported'); this.showAlert()});
 
+  }
+
+
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Reported!',
+      subTitle: 'You have reported ' + this.clientCount + ' potential clients at your location!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }
