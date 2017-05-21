@@ -27,7 +27,7 @@ export class Report {
   map: any;
   currentPosition: Geoposition;
   url : string = 'https://hessersapi.azurewebsites.net/api/InsertObservationCensusRecord';
-  private clientCount: number = 0;
+  private clientCount: number = 1;
   constructor(public navCtrl: NavController, 
   private geolocation: Geolocation, 
   private googleMaps: GoogleMaps, 
