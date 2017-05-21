@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+
 import {
  GoogleMaps,
  GoogleMap,
@@ -10,6 +11,7 @@ import {
  MarkerOptions,
  Marker
 } from '@ionic-native/google-maps';
+import { CensusServiceProvider } from "../../providers/census-service/census-service";
 
 declare var google;
 
@@ -23,7 +25,7 @@ export class Report {
   map: any;
 
   private clientCount: number = 0;
-  constructor(public navCtrl: NavController,private geolocation:Geolocation, private googleMaps: GoogleMaps) {
+  constructor(public navCtrl: NavController,private geolocation:Geolocation, private googleMaps: GoogleMaps, private censusService: CensusServiceProvider) {
 
   }
 
@@ -61,6 +63,7 @@ export class Report {
     position: this.map.getCenter()
   });
  
+
   let content = "You are Here";          
  
   this.addInfoWindow(marker, content);
@@ -80,3 +83,4 @@ addInfoWindow(marker, content){
 }
 
 }
+
